@@ -2,7 +2,8 @@ const mongoose=require('mongoose');
 const customerCommunicationSchema= new mongoose.Schema({
     userId:{
         type: Number,
-        required: true
+        required: true,
+        ref:"callRecord"
     },
     timestamp:{
         type: String,

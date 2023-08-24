@@ -2,7 +2,8 @@ const mongoose=require('mongoose');
 const callRecordSchema= new mongoose.Schema({
     id:{
         type: Number,
-        required: true
+        required: true,
+        ref:"customerCommunication"
     },
     name:{
         type: String,
@@ -17,7 +18,9 @@ const callRecordSchema= new mongoose.Schema({
         required: true
     },
     callType:{
-        type: String
+        type: String,
+        default: "chat",
+        required: true
     },
 
 })
